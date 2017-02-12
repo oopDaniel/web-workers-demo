@@ -6,6 +6,7 @@ this.onmessage = function(e) {
 
   try {
     length = imageData.data.length / 4;
+    var manipulate = getManipulateFunc(type);
     for (i = j = 0, ref = length; 0 <= ref ? j <= ref : j >= ref; i = 0 <= ref ? ++j : --j) {
       r = imageData.data[i * 4 + 0];
       g = imageData.data[i * 4 + 1];
